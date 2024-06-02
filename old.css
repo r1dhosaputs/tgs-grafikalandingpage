@@ -1,0 +1,135 @@
+*,
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* untuk nge fix berlebih tidak responsif pada tablet dan hp aosjs */
+
+body {
+  padding-top: 60px !important;
+  background-color: #fafafa !important;
+}
+
+/* costum text colors */
+.text-orange {
+  color: #ff7d29;
+}
+
+.text-shadow {
+  text-shadow: #212529 1px 1px 1px;
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ff7d29;
+  border-radius: 3px;
+  height: 50px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(33, 37, 41);
+}
+
+/* Firefox */
+/* Note: Mozilla has announced that they will support scrollbar-color property
+   in future releases. For now, you can use the pseudo-elements. */
+/* ::-moz-scrollbar {
+  width: 10px;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: #ff7d29;
+}
+
+::-moz-scrollbar-track {
+  background-color: #ccc;
+} */
+
+/* Splide */
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Gaya untuk tombol slide prev dan next */
+.splide__arrow--next {
+  margin-right: 13rem;
+}
+
+.splide__arrow--prev {
+  margin-left: 13rem; /* Tambahkan margin kiri sesuai keinginan */
+}
+
+.splide__pagination {
+  margin-bottom: 1rem;
+}
+
+.bg-transparent2 {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.4
+  ) !important; /* Putih dengan transparansi 50% */
+}
+
+.navbar {
+  transition: 1s ease-in-out;
+}
+
+.nav-item .nav-link {
+  position: relative;
+  padding: 0px 0px 6px 0px !important;
+  /* margin-top: 10px; */
+}
+.nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.5s, transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.nav-item .nav-link:focus::after,
+.nav-item .nav-link:active::after,
+.nav-item .nav-link:hover::after {
+  background-color: #ff7d29; /* Ganti dengan warna yang diinginkan */
+  transform: scaleX(0.75); /* Ganti dengan skala yang diinginkan */
+}
+
+/* Costum Media Query
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Gaya CSS untuk tablet */
+  .splide__arrow--next {
+    margin-right: 3rem;
+  }
+
+  .splide__arrow--prev {
+    margin-left: 3rem;
+  }
+}
+
+/* HP */
+@media (max-width: 767.98px) {
+  /* Gaya CSS untuk perangkat mobile */
+  .splide__arrow--next {
+    margin-right: 0rem;
+  }
+
+  .splide__arrow--prev {
+    margin-left: 0rem;
+  }
+}
